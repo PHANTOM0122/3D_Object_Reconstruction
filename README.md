@@ -4,8 +4,12 @@ With RGB-D cameras, we can get multiple RGB and Depth images and convert them to
 
 ## RGB-D Camera Spec
 - Model: Intel realsense D415
-- Intrinsic parameters
-
+- Intrinsic parameters in 640x480 RGB, Depth image.<br> 
+```
+K = [[597.522, 0.0, 312.885],
+     [0.0, 597.522, 239.870],
+     [0.0, 0.0, 1.0]]<br>
+```
 ## Requirements
 - Open3D
 - Pyrealsense2
