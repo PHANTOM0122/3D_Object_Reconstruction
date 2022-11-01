@@ -29,4 +29,8 @@ Initial alignment can be acheived through finding transformation matrix between 
 With ICP algorithm implemented in Open3D, refine initial transformation matrix.
 
 ## Results <br>
+The object was reconstructed with 3 different view of RGB-D Images. <br>
+<img src="https://github.com/PHANTOM0122/3D_Object_Reconstruction/blob/main/train/align_test21.png" width="320" height="240"/><img src="https://github.com/PHANTOM0122/3D_Object_Reconstruction/blob/main/train/align_test22.png" width="320" height="240"/><img src="https://github.com/PHANTOM0122/3D_Object_Reconstruction/blob/main/train/align_test20.png" width="320" height="240">
+
+The reconstructed point clouds is below. <br>
 <img src="https://user-images.githubusercontent.com/50229148/198976394-8b62fabf-8240-4684-a482-f698b1f63fdc.gif" width="500" height="300">
