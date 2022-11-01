@@ -16,8 +16,11 @@ K = [[597.522, 0.0, 312.885],
 - OpenCV
 - Numpy
 
-## Depth filtering
-Raw depth data are so noisy that depth filtering should be needed. Pyrealsense2 library, developed by Intel, offers filtering methods of depth images. In this project, spatial-filter was used that smoothes noise and preserves edge components in depth images. 
+## Align RGB and Depth Image & Depth Filtering
+Due to the different position of RGB and Depth lens, aligning them should be done to get exact point clouds. This project used alignment function offered by pyrealsense2 package. Raw depth data are so noisy that depth filtering should be needed. Pyrealsense2 library, developed by Intel, offers filtering methods of depth images. In this project, spatial-filter was used that smoothes noise and preserves edge components in depth images. 
+
+## Pre-Process Point Clouds
+Single object might be a part of the scanned data. In order to get points of interested objects, pre-processing should be implemented. Plane-removal, outlier-removal, DBSCAN clustering were executed to extract object. Open3D offers useful functions to filter points. 
 
 ## Initial Alignment
 Initial alignment can be acheived through finding transformation matrix between feature points, found by SIFT. The position of 3D points can be estimated with Back-Projection and Depth from depth images. Transformation matrix can be estimated with 3D corresponding feature points from souce and target point clouds, with RANSAC procedure.
