@@ -1,4 +1,4 @@
-# 3D Object Reconstruction with Multi-view RGB-D Images
+# 3D Object Reconstruction with Multi-View RGB-D Images
 
 With RGB-D cameras, we can get multiple RGB and Depth images and convert them to point clouds easily. Leveraging this, we can reconstruct single object with multi-view RGB and Depth images. To acheive this, point clouds from multi-view need to be registered. This task is also known as **point registration"**, whose goal is to find transfomration matrix between source and target point clouds. The alignment consists of two sub-alignment, Initial alignment and Alignment refinement. 
 
