@@ -28,6 +28,9 @@ Initial alignment can be acheived through finding transformation matrix between 
 ## Alignment Refinement
 With ICP algorithm implemented in Open3D, refine initial transformation matrix.
 
+## Pose Graph Optimization
+With optimzied pose graph, 
+
 ## Results <br>
 The object was reconstructed with multiple different view of RGB-D Images. <br>
 
