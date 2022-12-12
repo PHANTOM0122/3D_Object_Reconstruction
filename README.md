@@ -33,6 +33,13 @@ Initial alignment can be acheived through finding transformation matrix between 
 ```ORB.py```: Find 3d transformation matrix with ORB feature points<br>
 ```LoFTR.py```: Find 3d transformation matrix with LoFTR feature points<br>
 
+> **Reprjection Constraints**
+- Before <br>
+![image](https://user-images.githubusercontent.com/50229148/207070426-1ba44e95-91ce-4f27-a5aa-790c82466651.png)
+- After <br>
+![image](https://user-images.githubusercontent.com/50229148/207070623-72690f60-20a7-4a4f-8e43-15d8a960783d.png)
+
+
 ## ICP based Registration (Global Registration) 
 With ICP algorithm implemented in Open3D, refine initial transformation matrix. In this project, Point-to-Plane ICP method was used.
 
