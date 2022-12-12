@@ -35,5 +35,6 @@ With optimzied pose graph,
 The object was reconstructed with multiple different view of RGB-D Images. <br>
 
 The reconstructed point clouds is below. <br>
+<img src="https://user-images.githubusercontent.com/50229148/207055985-3f8fd7f2-305d-4b92-bff0-7f62675179ea.gif" width="500" height="300">
 <img src="https://user-images.githubusercontent.com/50229148/205788233-f9ee0b54-041c-4322-9d40-400a88220c9d.gif" width="500" height="300">
 <img src="https://user-images.githubusercontent.com/50229148/205788281-585d8de4-1218-46ae-9d44-1afadef26e0a.gif" width="500" height="300">
