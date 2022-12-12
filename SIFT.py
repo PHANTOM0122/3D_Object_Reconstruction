@@ -20,7 +20,7 @@ print(intrinsic.intrinsic_matrix)
 # Feature matching using SIFT algorithm
 ########################################################################################################################
 # Find transformation matrix from corresponding points based on SIFT
-def SIFT_Transformation(img1, img2, depth_img1, depth_img2, source_pcd, target_pcd):
+def SIFT_Transformation(img1, img2, depth_img1, depth_img2, source_pcd, target_pcd, distance_ratio=0.6):
 
     # Read image from path
     imgL = cv2.imread(img1)
@@ -88,10 +88,12 @@ def SIFT_Transformation(img1, img2, depth_img1, depth_img2, source_pcd, target_p
     kp2_1 = []
     source_x_min, source_x_max, source_y_min, source_y_max = get_boundary(source_pcd)
     target_x_min, target_x_max, target_y_min, target_y_max = get_boundary(target_pcd)
+    print(source_x_min, source_x_max, source_y_min, source_y_max)
+    print(target_x_min, target_x_max, target_y_min, target_y_max)
 
     # depth map에서 위치의 min, max x, y 찾아서 마스킹해서 outlier 제거
     for i, (m, n) in enumerate(matches):
-        if m.distance < 0.6 * n.distance:
+        if m.distance < distance_ratio * n.distance: # 0.6 for castard,
             if (kp1[m.queryIdx].pt[0] >= source_x_min and kp1[m.queryIdx].pt[0] <= source_x_max):
                 if (kp1[m.queryIdx].pt[1] >= source_y_min and kp1[m.queryIdx].pt[1] <= source_y_max):
                     if (kp2[m.trainIdx].pt[0] >= target_x_min and kp2[m.trainIdx].pt[0] <= target_x_max):
@@ -184,7 +186,6 @@ def SIFT_Transformation(img1, img2, depth_img1, depth_img2, source_pcd, target_p
     pcd1.colors = o3d.utility.Vector3dVector(pc_color1)
     pcd2.points = o3d.utility.Vector3dVector(pc_points2)
     pcd2.colors = o3d.utility.Vector3dVector(pc_color2)
-
     '''
     p2p = o3d.pipelines.registration.TransformationEstimationPointToPoint()
     R_t = p2p.compute_transformation(
@@ -193,10 +194,10 @@ def SIFT_Transformation(img1, img2, depth_img1, depth_img2, source_pcd, target_p
         correspondence_points
     )
     '''
-
     R_t = match_ransac(pts1_3d, pts2_3d, tol=0.1)
+
 
     print("Transformation is:")
     print(R_t)
 
-    return R_t, pcd1, pcd2
+    return R_t, pcd1, pcd2, pts1, pts2, pts1_3d, pts2_3d
