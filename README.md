@@ -42,6 +42,7 @@ The reconstructed point clouds is below. <br>
 <img src="https://user-images.githubusercontent.com/50229148/207056463-6033a29a-d25f-4100-8a3d-c5c1883d9eb4.gif" width="500" height="300">
 
 #### Human shape 3D Reconstruction 
+<img src="https://user-images.githubusercontent.com/50229148/207057339-28d455ff-27b5-4209-9afe-6133ea94e4b2.gif" width="500" height="300">
 <img src="https://user-images.githubusercontent.com/50229148/207056403-2bf1fd3e-0f4b-418f-a3e1-9286207f2d34.gif" width="500" height="300">
 
 
