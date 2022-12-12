@@ -22,10 +22,10 @@ Due to the different position of RGB and Depth lens, aligning them should be don
 ## Pre-Process Point Clouds
 Single object might be a part of the scanned data. In order to get points of interested objects, pre-processing should be implemented. Plane-removal, outlier-removal, DBSCAN clustering were executed to extract object. Open3D offers useful functions to filter points. 
 
-## Initial Alignment - Feature based 
+## Feature based Registration (Local Registration)
 Initial alignment can be acheived through finding transformation matrix between feature points, found by SIFT. The position of 3D points can be estimated with Back-Projection and Depth from depth images. Transformation matrix can be estimated with 3D corresponding feature points from souce and target point clouds, with RANSAC procedure. In order to find correspondeces in object area, extracted object 3D points were reprojected and the bounding box obtained to filter correspondeces out of object. 
 
-## Alignment Refinement - ICP based
+## ICP based Registration (Global Registration) 
 With ICP algorithm implemented in Open3D, refine initial transformation matrix. In this project, Point-to-Plane ICP method was used.
 
 ## Pose Graph Optimization
@@ -36,5 +36,7 @@ The object was reconstructed with multiple different view of RGB-D Images. <br>
 
 The reconstructed point clouds is below. <br>
 <img src="https://user-images.githubusercontent.com/50229148/207055985-3f8fd7f2-305d-4b92-bff0-7f62675179ea.gif" width="500" height="300">
-<img src="https://user-images.githubusercontent.com/50229148/205788233-f9ee0b54-041c-4322-9d40-400a88220c9d.gif" width="500" height="300">
-<img src="https://user-images.githubusercontent.com/50229148/205788281-585d8de4-1218-46ae-9d44-1afadef26e0a.gif" width="500" height="300">
+<img src="https://user-images.githubusercontent.com/50229148/207056463-6033a29a-d25f-4100-8a3d-c5c1883d9eb4.gif" width="500" height="300">
+<img src="https://user-images.githubusercontent.com/50229148/207056403-2bf1fd3e-0f4b-418f-a3e1-9286207f2d34.gif" width="500" height="300">
+
+
