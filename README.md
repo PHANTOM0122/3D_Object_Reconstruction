@@ -35,8 +35,13 @@ With optimzied pose graph,
 The object was reconstructed with multiple different view of RGB-D Images. <br>
 
 The reconstructed point clouds is below. <br>
+#### Object 3D Reconstruction (Feature based)
 <img src="https://user-images.githubusercontent.com/50229148/207055985-3f8fd7f2-305d-4b92-bff0-7f62675179ea.gif" width="500" height="300">
+
+#### Object 3D Reconstruction (ICP based)
 <img src="https://user-images.githubusercontent.com/50229148/207056463-6033a29a-d25f-4100-8a3d-c5c1883d9eb4.gif" width="500" height="300">
+
+#### Human shape 3D Reconstruction 
 <img src="https://user-images.githubusercontent.com/50229148/207056403-2bf1fd3e-0f4b-418f-a3e1-9286207f2d34.gif" width="500" height="300">
 
 
