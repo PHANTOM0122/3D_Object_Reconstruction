@@ -37,7 +37,7 @@ Initial alignment can be acheived through finding transformation matrix between 
 With ICP algorithm implemented in Open3D, refine initial transformation matrix. In this project, Point-to-Plane ICP method was used.
 
 ## Pose Graph Optimization
-With optimzied pose graph, 
+Pose graph optimization is a non-linear optimization of poses, frequently used in SLAM. Node represents poses of camera, edge represents relative pose between two cameras(nodes). In loop closure, the error occurs between predicted and measurement in loop nodes due to inaccurate camera poses. The goal of pose graph optimization is to minimize error between loop nodes(X_i, X_j), shown below.<br> <img src="https://user-images.githubusercontent.com/50229148/207068648-7660b2f5-3d09-4fe5-92ae-1582f424e82d.png" width="500" height="300"> <br>
 <img src="https://user-images.githubusercontent.com/50229148/207066364-70a2d1f5-0659-44fb-9fe3-2e934a765d22.gif" width="400" height="240"><img src="https://user-images.githubusercontent.com/50229148/207066377-2f863df7-4c54-4f0e-98ed-e22d7198e507.gif" width="400" height="240">
 
 
