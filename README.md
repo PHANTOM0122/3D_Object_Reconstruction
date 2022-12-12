@@ -22,11 +22,11 @@ Due to the different position of RGB and Depth lens, aligning them should be don
 ## Pre-Process Point Clouds
 Single object might be a part of the scanned data. In order to get points of interested objects, pre-processing should be implemented. Plane-removal, outlier-removal, DBSCAN clustering were executed to extract object. Open3D offers useful functions to filter points. 
 
-## Initial Alignment
-Initial alignment can be acheived through finding transformation matrix between feature points, found by SIFT. The position of 3D points can be estimated with Back-Projection and Depth from depth images. Transformation matrix can be estimated with 3D corresponding feature points from souce and target point clouds, with RANSAC procedure.
+## Initial Alignment - Feature based 
+Initial alignment can be acheived through finding transformation matrix between feature points, found by SIFT. The position of 3D points can be estimated with Back-Projection and Depth from depth images. Transformation matrix can be estimated with 3D corresponding feature points from souce and target point clouds, with RANSAC procedure. In order to find correspondeces in object area, extracted object 3D points were reprojected and the bounding box obtained to filter correspondeces out of object. 
 
-## Alignment Refinement
-With ICP algorithm implemented in Open3D, refine initial transformation matrix.
+## Alignment Refinement - ICP based
+With ICP algorithm implemented in Open3D, refine initial transformation matrix. In this project, Point-to-Plane ICP method was used.
 
 ## Pose Graph Optimization
 With optimzied pose graph, 
