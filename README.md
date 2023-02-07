@@ -48,8 +48,11 @@ Pose graph optimization is a non-linear optimization of poses, frequently used i
 
 #### Effect of Pose graph optimzation
 <img src="https://user-images.githubusercontent.com/50229148/207066364-70a2d1f5-0659-44fb-9fe3-2e934a765d22.gif" width="400" height="240"><img src="https://user-images.githubusercontent.com/50229148/207066377-2f863df7-4c54-4f0e-98ed-e22d7198e507.gif" width="400" height="240"> <br>
-You can find the difference of registration quality between unoptimized(left) and optimized(right) in reconstruction result. In unoptimized result, error exists due to accumulated pose error. 
+You can find the difference of registration quality between unoptimized(left) and optimized(right) in reconstruction result. In unoptimized result, error exists due to accumulated pose error. <br>
 
+## Run Registration <br>
+```Pose_graph_ICP.py```: Run registration with ICP method<br>
+```ORB.py```: Find 3d transformation matrix with ORB feature points<br>
 
 ## Results <br>
 The object was reconstructed with multiple different view of RGB-D Images. <br>
