@@ -52,7 +52,7 @@ You can find the difference of registration quality between unoptimized(left) an
 
 ## Run Registration <br>
 ```Pose_graph_ICP.py```: Run registration with ICP method<br>
-```ORB.py```: Find 3d transformation matrix with ORB feature points<br>
+```pose_graph_Feature_based.py```: Run registration with Feature based(SIFT) method<br>
 
 ## Results <br>
 The object was reconstructed with multiple different view of RGB-D Images. <br>
